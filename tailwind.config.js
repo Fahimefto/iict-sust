@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      ontFamily: {
+        sans: ["Cairo", "sans-serif"],
+      },
+    },
   },
-  plugins: [],
+  daisyui: {
+    themes: [],
+  },
+  plugins: [require("daisyui")],
 };
