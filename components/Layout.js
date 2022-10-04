@@ -15,7 +15,7 @@ export default function Layout({ title, children }) {
             : "Institute of Information and Communication Technology,SUST"}
         </title>
         <meta name="description" content="IICT,SUST" />
-        <link rel="icon" href="/iict-white.png" />
+        <link rel="icon" href="/iict-white.ico" />
       </Head>
       <div className="flex min-h-screen flex-col justify-between">
         {/* <Nav /> */}

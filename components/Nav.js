@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { BarsArrowDownIcon } from "@heroicons/react/24/solid";
+import { IoApps, HiHomeModern } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
 
 export default function Nav() {
@@ -9,13 +10,34 @@ export default function Nav() {
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} className="btn btn-ghost lg:hidden">
-              <BarsArrowDownIcon className="w-5" />
+            <div
+              tabIndex={0}
+              className="btn btn-ghost lg:hidden"
+              onClick={() =>
+                (document.getElementById("menu").style.display = "block")
+              }
+            >
+              <IoApps size={25} />
             </div>
+
+            {/**  sidemenu*/}
             <ul
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow-md bg-white border-2  rounded-box w-52"
+              id="menu"
             >
+              <div className="flex justify-end">
+                <div></div>
+                <button
+                  id="close"
+                  className=" items-end text-end"
+                  onClick={() =>
+                    (document.getElementById("menu").style.display = "none")
+                  }
+                >
+                  <IoMdClose size={25} />
+                </button>
+              </div>
               {/**Home  */}
               <li className="font-semibold">
                 <Link href="/">Home</Link>
@@ -131,11 +153,12 @@ export default function Nav() {
             </ul>
           </div>
           <div className=" ml-5 hidden lg:block ">
-            <Image src="/iict.png" height={50} width={100}></Image>
+            <Image src="/iict.png" height={40} width={80}></Image>
           </div>
         </div>
+        {/**  main menu*/}
         <div className="navbar-center hidden lg:flex ">
-          <ul className="menu menu-horizontal p-0  ">
+          <ul className="menu menu-horizontal p-0 z-20  ">
             {/**Home  */}
             <li className="font-semibold">
               <Link href="/">Home</Link>
@@ -143,7 +166,7 @@ export default function Nav() {
             {/** About IICT*/}
             <li tabIndex={0}>
               <div className="font-semibold">About IICT</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white">
                 <li className="hover:bg-rose-100">
                   <Link href="#">Institution</Link>
                 </li>
@@ -164,7 +187,7 @@ export default function Nav() {
             {/** Programs*/}
             <li tabIndex={0}>
               <div className="font-semibold">Programs</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white">
                 <li className="hover:bg-rose-100">
                   <Link href="#">Undergraduation Program</Link>
                 </li>
@@ -182,7 +205,7 @@ export default function Nav() {
             {/** Notice*/}
             <li tabIndex={0}>
               <div className="font-semibold">Notice</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white">
                 <li className="hover:bg-rose-100">
                   <Link href="#">General</Link>
                 </li>
@@ -206,7 +229,7 @@ export default function Nav() {
             {/** Life in IICT*/}
             <li tabIndex={0}>
               <div className="font-semibold">Life in IICT</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white">
                 <li className="hover:bg-rose-100">
                   <Link href="#">News & Events</Link>
                 </li>
@@ -225,7 +248,7 @@ export default function Nav() {
             {/** People*/}
             <li tabIndex={0}>
               <div className="font-semibold">People</div>
-              <ul className="p-2 w-48 border-2 ">
+              <ul className="p-2 w-48 border-2 bg-white">
                 <li className="hover:bg-rose-100">
                   <Link href="#">Alumni</Link>
                 </li>
@@ -252,10 +275,10 @@ export default function Nav() {
         </div>
         <div className="navbar-end">
           <div className="hidden lg:block lg:mr-5">
-            <Image src="/sust.png" height={80} width={80}></Image>
+            <Image src="/sust.png" height={60} width={60}></Image>
           </div>
           <div className="lg:hidden ">
-            <Image src="/iict.png" height={50} width={100}></Image>
+            <Image src="/iict.png" height={40} width={80}></Image>
           </div>
         </div>
       </div>

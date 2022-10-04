@@ -1,11 +1,14 @@
+import About from "../components/About";
+import ImageSlider from "../components/ImageSlider";
 import Layout from "../components/Layout";
+import Notice from "../components/Notice";
 
 export default function Home() {
   return (
     <Layout title="Home">
-      <div>
-        <h1>Hello SUST</h1>
-      </div>
+      <ImageSlider />
+      <About />
+      <Notice />
     </Layout>
   );
 }
