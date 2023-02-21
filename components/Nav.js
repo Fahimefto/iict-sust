@@ -23,110 +23,110 @@ export default function Nav() {
                 {/** About IICT*/}
                 <li>
                   <div className="font-semibold ">About IICT</div>
-                  <ul className="p-2 border-2 bg-white">
+                  <ul className="p-2 border-2 bg-white bg-white">
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Institution</Link>
+                      <Link href="/about">Institution</Link>
                     </li>
                     <li className="hover:bg-slate-100 ">
-                      <Link href="#">Aims and Objective</Link>
+                      <Link href="/about">Aims and Objective</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">History</Link>
+                      <Link href="/about">History</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Faculty</Link>
+                      <Link href="/about">Faculty</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Officers and Staffs</Link>
+                      <Link href="/about">Officers and Staffs</Link>
                     </li>
                   </ul>
                 </li>
                 {/** Programs*/}
                 <li>
                   <div className="font-semibold">Programs</div>
-                  <ul className="p-2 border-2 bg-white ">
+                  <ul className="p-2 border-2 bg-white bg-white ">
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Undergraduation Program</Link>
+                      <Link href="/about">Undergraduation Program</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Graduation Program</Link>
+                      <Link href="/about">Graduation Program</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Certificate Courses</Link>
+                      <Link href="/about">Certificate Courses</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Diploma Courses</Link>
+                      <Link href="/about">Diploma Courses</Link>
                     </li>
                   </ul>
                 </li>
                 {/** Notice*/}
                 <li>
                   <div className="font-semibold">Notice</div>
-                  <ul className="p-2 border-2 bg-white ">
+                  <ul className="p-2 border-2 bg-white bg-white ">
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">General</Link>
+                      <Link href="/about">General</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Projects</Link>
+                      <Link href="/about">Projects</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Undergraduation Program</Link>
+                      <Link href="/about">Undergraduation Program</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Graduation Program</Link>
+                      <Link href="/about">Graduation Program</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Certificate Coursess</Link>
+                      <Link href="/about">Certificate Coursess</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Diploma Coursess</Link>
+                      <Link href="/about">Diploma Coursess</Link>
                     </li>
                   </ul>
                 </li>
                 {/** Life in IICT*/}
                 <li>
                   <div className="font-semibold">Life in IICT</div>
-                  <ul className="p-2 border-2 bg-white ">
+                  <ul className="p-2 border-2 bg-white bg-white ">
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">News & Events</Link>
+                      <Link href="/about">News & Events</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Upcomming Events</Link>
+                      <Link href="/about">Upcomming Events</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Achievements</Link>
+                      <Link href="/about">Achievements</Link>
                     </li>
                   </ul>
                 </li>
                 {/** Research*/}
                 <li className="font-semibold">
-                  <Link href="#">Research</Link>
+                  <Link href="/about">Research</Link>
                 </li>
                 {/** People*/}
                 <li>
                   <div className="font-semibold">People</div>
                   <ul className="p-2 w-48 border-2 bg-white">
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Alumni</Link>
+                      <Link href="/about">Alumni</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Faculty</Link>
+                      <Link href="/about">Faculty</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Student</Link>
+                      <Link href="/about">Student</Link>
                     </li>
                     <li className="hover:bg-slate-100 bg-white">
-                      <Link href="#">Staff</Link>
+                      <Link href="/about">Staff</Link>
                     </li>
                   </ul>
                 </li>
                 {/** Contact*/}
                 <li className="font-semibold">
-                  <Link href="#">Contact</Link>
+                  <Link href="/about">Contact</Link>
                 </li>
                 {/** About*/}
                 <li className="font-semibold">
-                  <Link href="#">About</Link>
+                  <Link href="/about">About</Link>
                 </li>
               </ul>
             ) : null}
@@ -144,110 +144,110 @@ export default function Nav() {
             {/** About IICT*/}
             <li>
               <div className="font-semibold">About IICT</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white ">
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Institution</Link>
+                  <Link href="/about">Institution</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Aims and Objective</Link>
+                  <Link href="/about">Aims and Objective</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">History</Link>
+                  <Link href="/about">History</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Faculty</Link>
+                  <Link href="/about">Faculty</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Officers and Staffs</Link>
+                  <Link href="/about">Officers and Staffs</Link>
                 </li>
               </ul>
             </li>
             {/** Programs*/}
             <li>
               <div className="font-semibold">Programs</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white ">
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Undergraduation Program</Link>
+                  <Link href="/about">Undergraduation Program</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Graduation Program</Link>
+                  <Link href="/about">Graduation Program</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Certificate Courses</Link>
+                  <Link href="/about">Certificate Courses</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Diploma Courses</Link>
+                  <Link href="/about">Diploma Courses</Link>
                 </li>
               </ul>
             </li>
             {/** Notice*/}
             <li>
               <div className="font-semibold">Notice</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white ">
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">General</Link>
+                  <Link href="/about">General</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Projects</Link>
+                  <Link href="/about">Projects</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Undergraduation Program</Link>
+                  <Link href="/about">Undergraduation Program</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Graduation Program</Link>
+                  <Link href="/about">Graduation Program</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Certificate Coursess</Link>
+                  <Link href="/about">Certificate Coursess</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Diploma Coursess</Link>
+                  <Link href="/about">Diploma Coursess</Link>
                 </li>
               </ul>
             </li>
             {/** Life in IICT*/}
             <li>
               <div className="font-semibold">Life in IICT</div>
-              <ul className="p-2 border-2 ">
+              <ul className="p-2 border-2 bg-white ">
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">News & Events</Link>
+                  <Link href="/about">News & Events</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Upcomming Events</Link>
+                  <Link href="/about">Upcomming Events</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Achievements</Link>
+                  <Link href="/about">Achievements</Link>
                 </li>
               </ul>
             </li>
             {/** Research*/}
             <li className="font-semibold">
-              <Link href="#">Research</Link>
+              <Link href="/about">Research</Link>
             </li>
             {/** People*/}
             <li>
               <div className="font-semibold">People</div>
-              <ul className="p-2 w-48 border-2 ">
+              <ul className="p-2 w-48 border-2 bg-white">
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Alumni</Link>
+                  <Link href="/about">Alumni</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Faculty</Link>
+                  <Link href="/about">Faculty</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Student</Link>
+                  <Link href="/about">Student</Link>
                 </li>
                 <li className="hover:bg-slate-100 bg-white">
-                  <Link href="#">Staff</Link>
+                  <Link href="/about">Staff</Link>
                 </li>
               </ul>
             </li>
             {/** Contact*/}
             <li className="font-semibold">
-              <Link href="#">Contact</Link>
+              <Link href="/about">Contact</Link>
             </li>
             {/** About*/}
             <li className="font-semibold">
-              <Link href="#">About</Link>
+              <Link href="/about">About</Link>
             </li>
           </ul>
         </div>
