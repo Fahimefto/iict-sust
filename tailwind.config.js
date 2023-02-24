@@ -3,9 +3,14 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-pattern": "url('~/public/3.jpg')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
       ontFamily: {
         sans: ["Cairo", "sans-serif"],
       },
@@ -14,5 +19,5 @@ module.exports = {
   daisyui: {
     themes: ["light"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("flowbite/plugin")],
 };
