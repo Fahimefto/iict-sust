@@ -12,7 +12,7 @@ export default function Footerbar() {
               href="/"
               src="iict.png"
               alt="Flowbite Logo"
-              name="Institute of Information and Communication Technology,SUST"
+              name=""
               className="text-sm "
             />
           </div>
