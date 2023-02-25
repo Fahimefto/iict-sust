@@ -4,12 +4,12 @@ import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 export default function CardList() {
   return (
-    <Card className="shadow-none border-none ">
+    <div className=" shadow-none  border-none mt-10">
       <h5 className="text-2xl text-center font-bold tracking-tight text-gray-800 dark:text-white">
         Institute of Information and Communication Technology,{" "}
         <span className="text-rose-800">SUST</span>
       </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400 md:mx-10 text-justify">
+      <p className="font-normal text-gray-700 dark:text-gray-400 md:mx-20   mx-10 text-justify mt-5">
         The Institute of Information and Communication Technology (IICT) at
         Shahjalal University of Science and Technology (SUST) is a leading
         educational institution in Bangladesh that offers undergraduate,
@@ -26,12 +26,11 @@ export default function CardList() {
         Communication Technology.
       </p>
       <Link href="about/iict">
-        <Button className="w-36 items-center mx-auto bg-slate-200 text-gray-800 hover:bg-blue-400">
+        <Button className="w-36 items-center mx-auto bg-slate-200 text-gray-800 hover:bg-blue-400 mt-5">
           <FaInfoCircle className="mr-2" />
           Know More
         </Button>
       </Link>
-      <hr></hr>
-    </Card>
+    </div>
   );
 }
