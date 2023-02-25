@@ -1,56 +1,71 @@
 import { Footer } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 export default function Footerbar() {
   return (
-    <Footer container={true}>
-      <div className="w-full">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div className="">
-            <Footer.Brand
-              href="/"
-              src="iict.png"
-              alt="Flowbite Logo"
-              name=""
-              className="text-sm "
-            />
+    <>
+      <Footer bgDark={true}>
+        <div className="w-full">
+          <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-3">
+            <div>
+              <Footer.LinkGroup col={true}>
+                <Footer.Brand src="iict.png"></Footer.Brand>
+                <p className="text-lg font-semibold">
+                  Institute of Information and Communication Technology
+                </p>
+                <p className="">SUST, Sylhet-3114, Bangladesh</p>
+              </Footer.LinkGroup>
+            </div>
+
+            <div>
+              <Footer.Title title="Useful Links" />
+              <Footer.LinkGroup col={true}>
+                <Footer.Link href="#">SUST</Footer.Link>
+                <Footer.Link href="#">ePayment</Footer.Link>
+                <Footer.Link href="#">MIT</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Vision & Mission" />
+              <Footer.LinkGroup col={true}>
+                <p className="text-justify">
+                  Do reprehenderit culpa nulla ipsum Lorem. Id aute ipsum et
+                  incididunt officia excepteur incididunt ea duis duis consequat
+                  ex adipisicing anim. Ex nostrud ad labore do. Sint est do
+                  minim deserunt aute consequat veniam quis velit magna
+                  consectetur cupidatat.Aute tempor occaecat dolore veniam sint
+                  quis dolor elit excepteur proident magna deserunt. Sunt velit
+                  ipsum minim sint commodo pariatur esse nostrud pariatur qui
+                  cupidatat mollit veniam. Lorem cupidatat occaecat aliqua
+                  reprehenderit do. Nisi proident ullamco ad ullamco adipisicing
+                  sunt aliqua nostrud. Excepteur deserunt aliqua deserunt do
+                  sunt. Ea anim ut est labore ex officia adipisicing officia
+                  laborum ex veniam. Elit occaecat et dolor esse.
+                </p>
+              </Footer.LinkGroup>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-            <div>
-              <Footer.Title title="about" />
-              <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Flowbite</Footer.Link>
-                <Footer.Link href="#">Tailwind CSS</Footer.Link>
-              </Footer.LinkGroup>
+          <div className="w-full  py-6 px-4 sm:flex sm:items-center sm:justify-between">
+            <Footer.Copyright href="/" by="IICT, SUST" year={2023} />
+            <div className="text-sm text-gray-700 ">
+              <Link href="https://chaos-team.vercel.app/">
+                <a target="_blank" className="text-blue-800">
+                  Developed By Team-Chaos(SWE-18)
+                </a>
+              </Link>
             </div>
-            <div>
-              <Footer.Title title="Follow us" />
-              <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Github</Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
-              </Footer.LinkGroup>
-            </div>
-            <div>
-              <Footer.Title title="Legal" />
-              <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Privacy Policy</Footer.Link>
-                <Footer.Link href="#">Terms & Conditions</Footer.Link>
-              </Footer.LinkGroup>
+
+            <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+              <Footer.Icon href="#" icon={BsFacebook} />
+              <Footer.Icon href="#" icon={BsInstagram} />
+              <Footer.Icon href="#" icon={BsTwitter} />
+              <Footer.Icon href="#" icon={BsGithub} />
             </div>
           </div>
         </div>
-        <Footer.Divider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Flowbite™" year={2022} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
-            <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon href="#" icon={BsGithub} />
-          </div>
-        </div>
-      </div>
-    </Footer>
+      </Footer>
+    </>
   );
 }
