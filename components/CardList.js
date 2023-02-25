@@ -19,7 +19,7 @@ export default function CardList() {
         committed to providing high-quality education and research in the field
         of information and communication technology. Its programs are designed
         to prepare students to become innovative and creative professionals who
-        can effectively contribute to the development of the country's ICT
+        can effectively contribute to the development of the country&apos;s ICT
         industry. The Institute offers a range of programs, including Bachelor
         of Science (BSc) in Software Engineering, Master of Science (MSc) in
         Information and Communication Technology, and PhD in Information and
