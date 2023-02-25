@@ -17,7 +17,7 @@ export default function Layout({ title, children }) {
         <meta name="description" content="IICT,SUST" />
         <link rel="icon" href="/iict-white.png" />
       </Head>
-      <div className="flex min-h-screen flex-col justify-between">
+      <div className="flex min-h-screen flex-col">
         {/* <Nav /> */}
         <header>
           <Nav />
