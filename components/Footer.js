@@ -19,11 +19,13 @@ export default function Footerbar() {
               </Footer.LinkGroup>
             </div>
 
-            <div>
+            <div className="">
               <Footer.Title title="Useful Links" />
               <Footer.LinkGroup col={true}>
                 <Footer.Link href="#">SUST</Footer.Link>
                 <Footer.Link href="#">ePayment</Footer.Link>
+                <Footer.Link href="#">MIT</Footer.Link>
+                <Footer.Link href="#">Admission</Footer.Link>
                 <Footer.Link href="#">MIT</Footer.Link>
               </Footer.LinkGroup>
             </div>

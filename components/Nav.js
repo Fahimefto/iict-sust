@@ -34,11 +34,7 @@ export default function Nav() {
     <>
       <Navbar fluid={true} rounded={true} className="shadow-md">
         <Navbar.Brand href="/">
-          <img
-            src="/iict.png"
-            className="mr-3 h-6 sm:h-9"
-            alt="Flowbite Logo"
-          />
+          <img src="/iict.png" className="mr-3 h-6 sm:h-9" alt="IICT Logo" />
         </Navbar.Brand>
         <div className="flex md:order-2 ">
           <div className="mr-3 md:hidden ">
@@ -54,9 +50,7 @@ export default function Nav() {
           <Avatar alt="User settings" className="h-10" img="/sust.png" />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>
-            Home
-          </Navbar.Link>
+          <Navbar.Link href="/navbars">Home</Navbar.Link>
           <Navbar.Link>
             <Dropdown label="About IICT" inline={true}>
               <Dropdown.Item href="/navbars">Institution</Dropdown.Item>
