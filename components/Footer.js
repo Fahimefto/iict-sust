@@ -6,9 +6,9 @@ import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 export default function Footerbar() {
   return (
     <>
-      <Footer bgDark={true}>
-        <div className="w-full">
-          <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-3">
+      <Footer className="bg-blue-50">
+        <div className="w-full md:mx-20">
+          <div className="grid w-full grid-cols-1 gap-8 py-8 px-6 md:grid-cols-3">
             <div>
               <Footer.LinkGroup col={true}>
                 <Footer.Brand src="iict.png"></Footer.Brand>
