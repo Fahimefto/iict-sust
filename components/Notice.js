@@ -2,7 +2,7 @@ import { Button, Card } from "flowbite-react";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { FaAngleRight } from "react-icons/fa";
 export default function Notice() {
   const responsive = {
     desktop: {
@@ -24,7 +24,7 @@ export default function Notice() {
   return (
     <>
       <div className="  md:mx-10 mt-10">
-        <div className=" bg-[#ABBFBD] p-10 rounded-md -z-10">
+        <div className=" bg-[#3581b8] p-10 rounded-md -z-10">
           <h2 className="text-2xl font-bold text-center pb-10 =bg-white uppercase tracking-widest">
             Notice
           </h2>
@@ -128,8 +128,9 @@ export default function Notice() {
               </Card>
             </div>
           </Carousel>
-          <Button className="m-auto mt-10" pill={true}>
+          <Button className="m-auto mt-10 bg-[#1f271b]" pill={true}>
             See All
+            <FaAngleRight className="ml-1 " />
           </Button>
         </div>
       </div>

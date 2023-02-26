@@ -14,16 +14,7 @@ import {
   Button,
   Sidebar,
 } from "flowbite-react";
-import {
-  HiChartPie,
-  HiViewBoards,
-  HiInbox,
-  HiUser,
-  HiShoppingBag,
-  HiArrowSmRight,
-  HiTable,
-  BiBuoy,
-} from "react-icons/hi";
+
 import { MdArrowRight } from "react-icons/md";
 import { GrFormSubtract } from "react-icons/gr";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
