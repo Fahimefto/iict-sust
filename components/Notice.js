@@ -24,10 +24,11 @@ export default function Notice() {
   return (
     <>
       <div className="  md:mx-10 mt-10">
-        <div className=" bg-[#3581b8] p-10 rounded-md -z-10">
-          <h2 className="text-2xl font-bold text-center pb-10 =bg-white uppercase tracking-widest">
+        <div className=" bg-gray-50 p-10 rounded-md ">
+          <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-rose-800">
             Notice
           </h2>
+          <hr className="mb-10 border-2 w-1/4 m-auto border-rose-800"></hr>
           <Carousel responsive={responsive}>
             <div className="max-w-sm">
               <Card
@@ -128,7 +129,7 @@ export default function Notice() {
               </Card>
             </div>
           </Carousel>
-          <Button className="m-auto mt-10 bg-[#1f271b]" pill={true}>
+          <Button className="m-auto mt-10 " pill={true}>
             See All
             <FaAngleRight className="ml-1 " />
           </Button>
