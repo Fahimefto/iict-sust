@@ -23,7 +23,7 @@ export default function Events() {
   return (
     <>
       <div className="md:mx-10 ">
-        <div className=" bg-red-50  p-10 rounded-md ">
+        <div className=" bg-red-700  p-10 rounded-md ">
           <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-gray-50">
             Events
           </h2>
