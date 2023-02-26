@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
-import Button from "./common/Button";
+import Button from "../common/Button";
 export default function CardList() {
   return (
     <div className=" shadow-none  border-none mt-10">

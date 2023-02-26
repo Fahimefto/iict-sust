@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { BarsArrowDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import CrossToogle from "../CrossToogle";
+import CrossToogle from "./CrossToogle";
 import {
   Alert,
   DarkThemeToggle,

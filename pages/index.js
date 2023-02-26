@@ -1,7 +1,8 @@
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarousel from "../components/home/ImageCarousel";
 import Layout from "../components/common/Layout";
-import Card from "../components/CardList";
-import Notice from "../components/Notice";
+import Card from "../components/home/CardList";
+import Notice from "../components/home/Notice";
+import Events from "../components/home/Events";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       <div>
         <ImageCarousel />
         <Card />
+        <Notice />
+        <Events />
+        <Notice />
         <Notice />
       </div>
     </Layout>
