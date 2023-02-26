@@ -25,16 +25,13 @@ export default function Notice() {
     <>
       <div className="  md:mx-10 mt-10">
         <div className=" bg-gray-50 p-10 rounded-md ">
-          <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-rose-800">
+          <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-gray-800">
             Notice
           </h2>
           <hr className="mb-10 border-2 w-1/4 m-auto border-rose-800"></hr>
           <Carousel responsive={responsive}>
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -45,10 +42,7 @@ export default function Notice() {
               </Card>
             </div>
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -58,11 +52,9 @@ export default function Notice() {
                 </p>
               </Card>
             </div>
+
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -72,11 +64,9 @@ export default function Notice() {
                 </p>
               </Card>
             </div>
+
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -86,11 +76,9 @@ export default function Notice() {
                 </p>
               </Card>
             </div>
+
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -100,11 +88,9 @@ export default function Notice() {
                 </p>
               </Card>
             </div>
+
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -114,11 +100,21 @@ export default function Notice() {
                 </p>
               </Card>
             </div>
+
             <div className="max-w-sm">
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-              >
+              <Card>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  Here are the biggest enterprise technology acquisitions of
+                  2021 so far, in reverse chronological order.
+                </p>
+              </Card>
+            </div>
+
+            <div className="max-w-sm">
+              <Card>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
@@ -129,9 +125,13 @@ export default function Notice() {
               </Card>
             </div>
           </Carousel>
-          <Button className="m-auto mt-10 " pill={true}>
+          <Button
+            className="m-auto mt-10 "
+            color="failure"
+            outline={true}
+            pill={true}
+          >
             See All
-            <FaAngleRight className="ml-1 " />
           </Button>
         </div>
       </div>
