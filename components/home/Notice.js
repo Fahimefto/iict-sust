@@ -23,7 +23,7 @@ export default function Notice() {
   };
   return (
     <>
-      <div className="  md:mx-10 mt-10">
+      <div className="">
         <div className=" bg-gray-50 p-10 rounded-md ">
           <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-gray-800">
             Notice

@@ -22,16 +22,19 @@ export default function Events() {
   };
   return (
     <>
-      <div className="md:mx-10 ">
-        <div className=" bg-red-700  p-10 rounded-md ">
-          <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-gray-50">
+      <div className="border ">
+        <div className="   p-10 rounded-md ">
+          <h2 className="text-2xl font-bold text-center mb-2 uppercase tracking-widest text-gray-800">
             Events
           </h2>
-          <hr className="mb-10 border-2 w-1/4 m-auto border-gray-800"></hr>
+          <hr className="mb-10 border-2 w-1/4 m-auto border-rose-800"></hr>
 
           <Carousel responsive={responsive}>
             <div className="max-w-sm">
-              <Card imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg">
+              <Card
+                imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
+                className="bg-gray-100"
+              >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>

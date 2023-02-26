@@ -3,6 +3,8 @@ import Layout from "../components/common/Layout";
 import Card from "../components/home/CardList";
 import Notice from "../components/home/Notice";
 import Events from "../components/home/Events";
+import Achievements from "../components/home/Achievements";
+import Collab from "../components/home/Collab";
 
 export default function Home() {
   return (
@@ -12,8 +14,8 @@ export default function Home() {
         <Card />
         <Notice />
         <Events />
-        <Notice />
-        <Notice />
+        <Achievements />
+        <Collab />
       </div>
     </Layout>
   );

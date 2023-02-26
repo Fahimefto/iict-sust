@@ -4,7 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import Button from "../common/Button";
 export default function CardList() {
   return (
-    <div className=" shadow-none  border-none mt-10">
+    <div className=" shadow-none  border-none mt-10 mb-10">
       <h5 className="text-2xl text-center font-bold tracking-tight text-gray-800 dark:text-white">
         Institute of Information and Communication Technology,{" "}
         <span className="text-rose-800">SUST</span>
