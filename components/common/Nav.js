@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { BarsArrowDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import CrossToogle from "./CrossToogle";
+import CrossToogle from "../CrossToogle";
 import {
   Alert,
   DarkThemeToggle,
@@ -32,7 +32,11 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Navbar fluid={true} rounded={true} className="shadow-md">
+      <Navbar
+        fluid={true}
+        rounded={true}
+        className="shadow-md sticky top-0 z-30"
+      >
         <Navbar.Brand href="/">
           <img src="/iict.png" className="mr-3 h-6 sm:h-9" alt="IICT Logo" />
         </Navbar.Brand>
@@ -100,9 +104,9 @@ export default function Nav() {
         </Navbar.Collapse>
       </Navbar>
       {isOpen && (
-        <div className="w-full md:hidden absolute z-30 -p-10 border-2 bo border-gray-100 ">
+        <div className="w-full md:hidden absolute -p-10 border-2 border-gray-100 z-50">
           <Sidebar
-            className="w-full shadow-md "
+            className="w-full shadow-md z-50"
             aria-label="Sidebar with content separator example"
           >
             <Sidebar.Items>

@@ -1,5 +1,5 @@
 import ImageCarousel from "../components/ImageCarousel";
-import Layout from "../components/Layout";
+import Layout from "../components/common/Layout";
 import Card from "../components/CardList";
 import Notice from "../components/Notice";
 

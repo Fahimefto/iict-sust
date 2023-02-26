@@ -19,11 +19,11 @@ export default function Layout({ title, children }) {
       </Head>
       <div className="flex min-h-screen flex-col">
         {/* <Nav /> */}
-        <header>
+        <header className="sticky top-0 z-50">
           <Nav />
         </header>
         {/** Main content */}
-        <main>{children}</main>
+        <main className="relative">{children}</main>
         {/** Footer */}
         <footer>
           <Footer />

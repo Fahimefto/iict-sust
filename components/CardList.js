@@ -9,7 +9,7 @@ export default function CardList() {
         Institute of Information and Communication Technology,{" "}
         <span className="text-rose-800">SUST</span>
       </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400 md:mx-20   mx-10 text-justify mt-5">
+      <p className="font-normal text-gray-700 dark:text-gray-400 md:mx-20   mx-5 text-justify mt-5">
         The Institute of Information and Communication Technology (IICT) at
         Shahjalal University of Science and Technology (SUST) is a leading
         educational institution in Bangladesh that offers undergraduate,
@@ -25,12 +25,6 @@ export default function CardList() {
         Information and Communication Technology, and PhD in Information and
         Communication Technology.
       </p>
-      <Link href="about/iict">
-        <Button className="w-36 items-center mx-auto bg-slate-200 text-gray-800 hover:bg-blue-400 mt-5">
-          <FaInfoCircle className="mr-2" />
-          Know More
-        </Button>
-      </Link>
     </div>
   );
 }
