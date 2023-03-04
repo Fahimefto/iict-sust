@@ -6,22 +6,22 @@ import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 export default function Footerbar() {
   return (
     <>
-      <Footer className="bg-gray-50">
-        <div className="w-full md:mx-20">
-          <div className="grid w-full grid-cols-1 gap-8 py-8 px-6 md:grid-cols-3">
+      <Footer className="">
+        <div className="w-full md:px-20 bg-slate-200 ">
+          <div className="grid w-full grid-cols-1 gap-8 py-8 px-6 md:grid-cols-3 ">
             <div>
               <Footer.LinkGroup col={true}>
-                <Footer.Brand src="iict.png"></Footer.Brand>
-                <p className="text-lg font-semibold">
+                <Footer.Brand src="iict.png" alt="iict logo"></Footer.Brand>
+                <p className="text-lg font-semibold text-gray-800">
                   Institute of Information and Communication Technology
                 </p>
-                <p className="">SUST, Sylhet-3114, Bangladesh</p>
+                <p className="text-gray-700">SUST, Sylhet-3114, Bangladesh</p>
               </Footer.LinkGroup>
             </div>
 
             <div className="">
-              <Footer.Title title="Useful Links" />
-              <Footer.LinkGroup col={true}>
+              <Footer.Title title="Useful Links" className="text-gray-800" />
+              <Footer.LinkGroup col={true} className="text-gray-800">
                 <Footer.Link href="#">SUST</Footer.Link>
                 <Footer.Link href="#">ePayment</Footer.Link>
                 <Footer.Link href="#">MIT</Footer.Link>
@@ -30,9 +30,13 @@ export default function Footerbar() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Vision & Mission" />
+              <Footer.Title
+                title="Vision & Mission"
+                className="text-gray-800"
+                color="black"
+              />
               <Footer.LinkGroup col={true}>
-                <p className="text-justify">
+                <p className="text-justify ">
                   Do reprehenderit culpa nulla ipsum Lorem. Id aute ipsum et
                   incididunt officia excepteur incididunt ea duis duis consequat
                   ex adipisicing anim. Ex nostrud ad labore do. Sint est do

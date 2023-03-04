@@ -19,15 +19,12 @@ import { MdArrowRight } from "react-icons/md";
 import { GrFormSubtract } from "react-icons/gr";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { CgMenuRound } from "react-icons/cg";
-export default function Nav() {
+import dynamic from "next/dynamic";
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Navbar
-        fluid={true}
-        rounded={true}
-        className="shadow-md sticky top-0 z-30"
-      >
+      <Navbar fluid={true} rounded={true} className="shadow-md  z-30">
         <Navbar.Brand href="/">
           <img src="/iict.png" className="mr-3 h-6 sm:h-9" alt="IICT Logo" />
         </Navbar.Brand>
@@ -42,17 +39,27 @@ export default function Nav() {
               {isOpen ? <p>Close</p> : <p>Menu</p>}
             </Button>
           </div>
-          <Avatar alt="User settings" className="h-10" img="/sust.png" />
+          <Avatar alt="SUST" className="h-10" img="/sust.png" />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars">Home</Navbar.Link>
+          <Navbar.Link href="/">Home</Navbar.Link>
           <Navbar.Link>
             <Dropdown label="About IICT" inline={true}>
-              <Dropdown.Item href="/navbars">Institution</Dropdown.Item>
-              <Dropdown.Item>Aim & Objective</Dropdown.Item>
-              <Dropdown.Item>History</Dropdown.Item>
-              <Dropdown.Item>Faculty</Dropdown.Item>
-              <Dropdown.Item>Officers & Staffs</Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about/institute">Institution</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about/aim&objective">Aim & Objective</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about/history">Institution</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about/faculty">Faculty</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link href="/about/officer&staff">Officers & Staffs</Link>
+              </Dropdown.Item>
             </Dropdown>
           </Navbar.Link>
           <Navbar.Link>
@@ -102,18 +109,18 @@ export default function Nav() {
           >
             <Sidebar.Items>
               <Sidebar.ItemGroup>
-                <Sidebar.Item href="#" icon={IoIosArrowDroprightCircle}>
-                  Home
+                <Sidebar.Item icon={IoIosArrowDroprightCircle}>
+                  <Link href="/">Home</Link>
                 </Sidebar.Item>
                 <Sidebar.Collapse
                   label="About IICT"
                   icon={IoIosArrowDroprightCircle}
                 >
-                  <Sidebar.Item href="#" icon={GrFormSubtract}>
-                    Institution
+                  <Sidebar.Item icon={GrFormSubtract}>
+                    <Link href="/about/institute">Institution</Link>
                   </Sidebar.Item>
                   <Sidebar.Item href="#" icon={GrFormSubtract}>
-                    Aim & Objective
+                    <Link href="/about/aim&obejctive">Aim & Objective</Link>
                   </Sidebar.Item>
                   <Sidebar.Item href="#" icon={GrFormSubtract}>
                     History
@@ -214,4 +221,6 @@ export default function Nav() {
       )}
     </>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(Nav), { ssr: false });

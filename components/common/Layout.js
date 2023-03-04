@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import Nav from "./Nav";
+import Nav1 from "./Nav1";
 import Head from "next/head";
 
 export default function Layout({ title, children }) {
@@ -19,8 +19,8 @@ export default function Layout({ title, children }) {
       </Head>
       <div className="flex min-h-screen flex-col">
         {/* <Nav /> */}
-        <header className="sticky top-0 z-50">
-          <Nav />
+        <header className=" z-50">
+          <Nav1 />
         </header>
         {/** Main content */}
         <main className="relative">{children}</main>
