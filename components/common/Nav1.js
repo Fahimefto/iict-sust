@@ -182,13 +182,17 @@ const Nav1 = () => {
               {routes.map((route) => {
                 if (route.sub.length < 1) {
                   return (
-                    <Link className="" href={`${route.path}`}>
-                      {route.name}
+                    <Link className="" href={`${route.path}`} key={route.name}>
+                      <a className="">{route.name}</a>
                     </Link>
                   );
                 } else {
                   return (
-                    <Menu as="div" className="relative inline-block text-left">
+                    <Menu
+                      as="div"
+                      className="relative inline-block text-left"
+                      key={route.name}
+                    >
                       <div className="items-center flex">
                         <Menu.Button className="inline-flex w-full justify-center rounded-md   text-sm font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                           {route.name}
@@ -209,19 +213,17 @@ const Nav1 = () => {
                           </svg>
                         </Menu.Button>
                       </div>
-                      <Menu.Items className="absolute -right-12 w-56 top-12 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-100 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute -right-12 w-56 top-12 origin-top-right divide-y divide-rose-300 rounded-md bg-gray-50 shadow-lg ring-4 ring-red-800 ring-opacity-5 focus:outline-none">
                         {route.sub.map((sub) => (
                           <Menu.Item key={sub.name}>
                             {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-rose-800 text-white"
-                                    : "text-gray-900"
-                                } group group-odd:bg-white justify-center flex w-full items-center rounded-md px-2 py-3 text-sm `}
-                              >
-                                <Link href={`${sub.path}`}>{sub.name}</Link>
-                              </button>
+                              <Link href={sub.path} passHref>
+                                <a
+                                  className={`group group-odd:bg-white justify-center flex w-full items-center rounded-sm px-2 py-3 text-sm  hover:bg-rose-800 hover:text-white `}
+                                >
+                                  {sub.name}
+                                </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         ))}

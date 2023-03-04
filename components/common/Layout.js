@@ -25,7 +25,7 @@ export default function Layout({ title, children }) {
         {/** Main content */}
         <main className="relative">{children}</main>
         {/** Footer */}
-        <footer>
+        <footer className="relative mt-10">
           <Footer />
         </footer>
       </div>
