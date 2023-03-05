@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Menu } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
 const Nav1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -166,17 +166,17 @@ const Nav1 = () => {
 
   return (
     <>
-      <header ariaLabel="IICT SUST" className="shadow-sm">
+      <header aria-label="IICT SUST" className="shadow-sm">
         <div className="mx-auto max-w-screen p-4">
           <div className="flex items-center justify-between gap-4 lg:gap-10">
             <div className="flex lg:w-0 lg:flex-1">
-              <Link href="#">
+              <Link href="/">
                 <img src="/iict.png" className="h-10 w-20" alt="IICT Logo" />
               </Link>
             </div>
 
             <nav
-              ariaLabel="Site Nav"
+              aria-label="Site Nav"
               className="hidden gap-8 text-sm font-medium lg:flex justify-center items-center"
             >
               {routes.map((route) => {
@@ -244,28 +244,169 @@ const Nav1 = () => {
               <button
                 className="rounded-lg bg-gray-100 p-2 text-gray-600"
                 type="button"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
               >
-                <span className="sr-only">Open menu</span>
-                <svg
-                  aria-hidden="true"
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewbox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                {isOpen ? (
+                  <svg
+                    className="h-5 w-5 text-red-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 6h16M4 12h16M4 18h16"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
         </div>
       </header>
+
+      {isOpen && (
+        <div
+          className={`lg:hidden absolute w-full top-18 right-0 flex max-h-[35rem] md:max-h-[30rem] pb-10 flex-col justify-between border-r bg-white   border-2 border-red-100 `}
+        >
+          <div className={`px-5  overflow-y-auto `}>
+            <nav
+              aria-label="Side Nav"
+              className="mt-6 flex flex-col space-y-1 even:bg-slate-50"
+            >
+              {routes.map((route) => {
+                if (route.sub.length < 1) {
+                  return (
+                    <>
+                      <Link href={`${route.path}`} key={route.name}>
+                        <a className="flex items-center gap-2 rounded-lg hover:bg-rose-100 px-4 py-2 text-gray-800">
+                          <svg
+                            className="h-5 w-5 text-rose-800 hover:text-white hover:bg-white"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            {" "}
+                            <circle cx="12" cy="12" r="10" />{" "}
+                            <polyline points="12 16 16 12 12 8" />{" "}
+                            <line x1="8" y1="12" x2="16" y2="12" />
+                          </svg>
+
+                          <span className="text-sm font-medium">
+                            {route.name}
+                          </span>
+                        </a>
+                      </Link>
+                      <hr></hr>
+                    </>
+                  );
+                } else {
+                  return (
+                    <>
+                      <details
+                        className="group [&_summary::-webkit-details-marker]:hidden"
+                        key={route.name}
+                      >
+                        <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-700">
+                          <div className="flex items-center gap-2">
+                            <svg
+                              className="h-5 w-5 text-rose-800 hover:text-white"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              {" "}
+                              <circle cx="12" cy="12" r="10" />{" "}
+                              <polyline points="12 16 16 12 12 8" />{" "}
+                              <line x1="8" y1="12" x2="16" y2="12" />
+                            </svg>
+
+                            <span className="text-sm font-medium">
+                              {route.name}
+                            </span>
+                          </div>
+
+                          <span className="shrink-0 transition duration-300 group-open:-rotate-180">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                        </summary>
+
+                        <nav
+                          aria-label="Teams Nav"
+                          className="mt-2 flex flex-col px-4"
+                        >
+                          {route.sub.map((sub) => {
+                            return (
+                              <Link href={`${sub.path}`} key={sub.name}>
+                                <a className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-700 hover:bg-rose-800 hover:text-white">
+                                  <svg
+                                    className="h-5 w-5 text-red-500"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  >
+                                    {" "}
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                  </svg>
+
+                                  <span className="text-sm font-medium">
+                                    {sub.name}
+                                  </span>
+                                </a>
+                              </Link>
+                            );
+                          })}
+                        </nav>
+                      </details>
+                      <hr></hr>
+                    </>
+                  );
+                }
+              })}
+            </nav>
+          </div>
+        </div>
+      )}
     </>
   );
 };

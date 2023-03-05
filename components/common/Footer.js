@@ -11,7 +11,7 @@ export default function Footerbar() {
           <div className="grid w-full grid-cols-1 gap-8 py-8 px-6 md:grid-cols-3 ">
             <div>
               <Footer.LinkGroup col={true}>
-                <Footer.Brand src="iict.png" alt="iict logo"></Footer.Brand>
+                <Footer.Brand src="/iict.png" alt="iict logo"></Footer.Brand>
                 <p className="text-lg font-semibold text-gray-800">
                   Institute of Information and Communication Technology
                 </p>
