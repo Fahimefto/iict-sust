@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
+import index from "../../pages/contact";
 const Nav1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -287,7 +288,7 @@ const Nav1 = () => {
 
       {isOpen && (
         <div
-          className={`lg:hidden absolute w-full top-18 right-0 flex max-h-[35rem] md:max-h-[30rem] pb-10 flex-col justify-between border-r bg-white   border-2 border-red-100 `}
+          className={`lg:hidden absolute w-full top-18 right-0 flex max-h-[35rem] md:min-h-[30rem] pb-10 flex-col justify-between border-r bg-white   border-2 border-red-100 `}
         >
           <div className={`px-5  overflow-y-auto `}>
             <nav
@@ -372,28 +373,33 @@ const Nav1 = () => {
                           aria-label="Teams Nav"
                           className="mt-2 flex flex-col px-4"
                         >
-                          {route.sub.map((sub) => {
+                          {route.sub.map((sub, index) => {
                             return (
-                              <Link href={`${sub.path}`} key={sub.name}>
-                                <a className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-700 hover:bg-rose-800 hover:text-white">
-                                  <svg
-                                    className="h-5 w-5 text-red-500"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  >
-                                    {" "}
-                                    <line x1="5" y1="12" x2="19" y2="12" />
-                                  </svg>
+                              <>
+                                <Link href={`${sub.path}`} key={sub.name}>
+                                  <a className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-700 hover:bg-rose-800 hover:text-white">
+                                    <svg
+                                      className="h-5 w-5 text-red-500"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      strokeWidth="2"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    >
+                                      {" "}
+                                      <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
 
-                                  <span className="text-sm font-medium">
-                                    {sub.name}
-                                  </span>
-                                </a>
-                              </Link>
+                                    <span className="text-sm font-medium">
+                                      {sub.name}
+                                    </span>
+                                  </a>
+                                </Link>
+                                {route.sub.length !== index + 1 ? (
+                                  <hr></hr>
+                                ) : null}
+                              </>
                             );
                           })}
                         </nav>
