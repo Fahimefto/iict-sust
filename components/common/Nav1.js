@@ -50,22 +50,22 @@ const Nav1 = () => {
       sub: [
         {
           name: "UnderGraduation Program",
-          path: "/about/institute",
+          path: "/programs/undergraduate",
           sub: [],
         },
         {
           name: "Graduation Program",
-          path: "/about/aim&objective",
+          path: "/programs/graduate",
           sub: [],
         },
         {
           name: "Certificate Course",
-          path: "/about/history",
+          path: "/programs/certificate",
           sub: [],
         },
         {
           name: "Diploma Course",
-          path: "/about/faculty",
+          path: "/programs/diploma",
           sub: [],
         },
       ],
