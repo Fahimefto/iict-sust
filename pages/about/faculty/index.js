@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../components/common/Layout";
-import FacultyCard from "../../components/about/facultyCard";
-import HeadingBar from "../../components/common/headingBar";
+import Layout from "../../../components/common/Layout";
+import FacultyCard from "../../../components/about/facultyCard";
+import HeadingBar from "../../../components/common/headingBar";
 
 export default function Faculty() {
   const faculties = [
@@ -51,6 +51,7 @@ export default function Faculty() {
             name={faculty.name}
             email={faculty.email}
             designation={faculty.designation}
+            id={faculty.id}
             key={faculty.id}
           />
         ))}

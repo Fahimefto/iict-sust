@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Menu, Transition } from "@headlessui/react";
-import index from "../../pages/contact";
+import { Menu } from "@headlessui/react";
+
 const Nav1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -167,7 +167,7 @@ const Nav1 = () => {
 
   return (
     <>
-      <header aria-label="IICT SUST" className="shadow-sm">
+      <header aria-label="IICT SUST" className="shadow-md bg-white">
         <div className="mx-auto max-w-screen p-4">
           <div className="flex items-center justify-between gap-4 lg:gap-10">
             <div className="flex lg:w-0 lg:flex-1">
@@ -288,7 +288,7 @@ const Nav1 = () => {
 
       {isOpen && (
         <div
-          className={`lg:hidden absolute w-full top-18 right-0 flex max-h-[35rem] md:min-h-[30rem] pb-10 flex-col justify-between border-r bg-white   border-2 border-red-100 `}
+          className={`lg:hidden absolute w-full top-18 right-0 flex max-h-[35rem] md:min-h-[30rem] mb-10 pb-5 flex-col justify-between border-r bg-white   border-b-2 border-opacity-25 border-gray-700 rounded-b-2xl shadow-lg`}
         >
           <div className={`px-5  overflow-y-auto `}>
             <nav

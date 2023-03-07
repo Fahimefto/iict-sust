@@ -46,7 +46,7 @@ function History() {
     <Layout>
       <section className="max-w-screen-2xl m-auto">
         <HeadingBar name=" History" />
-        <div className="mt-10">
+        <div className="m-10 ">
           Occaecat tempor voluptate cillum voluptate veniam voluptate minim
           velit adipisicing. Mollit est fugiat officia reprehenderit dolore ea
           id sint ex cillum adipisicing. Qui amet ipsum labore amet.Sint aliquip
@@ -57,7 +57,7 @@ function History() {
           cupidatat sint consequat ad nulla nulla veniam occaecat culpa sunt
           aliquip exercitation officia.
         </div>
-        <div className="mt-5">
+        <div className="m-10">
           Occaecat tempor voluptate cillum voluptate veniam voluptate minim
           velit adipisicing. Mollit est fugiat officia reprehenderit dolore ea
           id sint ex cillum adipisicing. Qui amet ipsum labore amet.Sint aliquip

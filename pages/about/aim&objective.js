@@ -68,18 +68,16 @@ function Aimobjective() {
         </h1>
         <hr className="border-2 w-4/6 m-auto  border-rose-800"></hr>
         <div className="flex flex-col items-center justify-center min-w-screen-2xl">
-          <ListGroup className="p-5 text-xl max-w-screen-lg flex flex-col border-none mt-5">
-            {aims.map((aim) => (
-              <ListGroup.Item
-                as="div"
-                classname="items-center hover:bg-rose-800"
-                icon={BiBulb}
-                key={aim.id}
+          <ul className="  mx-10 max-w-screen-2xl flex flex-col border-none mt-5 list-disc">
+            {aims.map((aim, i) => (
+              <li
+                className="border rounded-md bg-white list-inside px-3 py-3 cursor-pointer hover:text-white hover:bg-rose-800"
+                key={i}
               >
                 {aim.title}
-              </ListGroup.Item>
+              </li>
             ))}
-          </ListGroup>
+          </ul>
         </div>
       </section>
     </Layout>
