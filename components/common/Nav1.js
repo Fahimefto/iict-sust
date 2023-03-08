@@ -72,95 +72,95 @@ const Nav1 = () => {
     },
     {
       name: "Notice",
-      path: "/about",
+      path: "#",
       sub: [
         {
           name: "General",
-          path: "/about/institute",
+          path: "/notice/general",
           sub: [],
         },
         {
           name: "Projects",
-          path: "/about/aim&objective",
+          path: "/notice/projects",
           sub: [],
         },
         {
           name: "UnderGraduation Program",
-          path: "/about/history",
+          path: "/notice/undergraduate",
           sub: [],
         },
         {
           name: "Graduation Program",
-          path: "/about/faculty",
+          path: "/notice/graduate",
           sub: [],
         },
         {
           name: "Certificate Course",
-          path: "/about/officer&staff",
+          path: "/notice/certificate",
           sub: [],
         },
         {
           name: "Diploma Course",
-          path: "/about/officer&staff",
+          path: "/notice/diploma",
           sub: [],
         },
       ],
     },
     {
       name: "Life at IICT",
-      path: "/about",
+      path: "#",
       sub: [
         {
           name: "News & Events",
-          path: "/about/institute",
+          path: "/life_at_iict/news",
           sub: [],
         },
         {
-          name: "Upcoming Events",
-          path: "/about/aim&objective",
+          name: "Upcomming Events",
+          path: "/life_at_iict/upcomming_events",
           sub: [],
         },
         {
           name: "Achievements",
-          path: "/about/history",
+          path: "/life_at_iict/achievements",
           sub: [],
         },
       ],
     },
     {
       name: "Research",
-      path: "/about",
+      path: "/research",
       sub: [],
     },
     {
       name: "People",
-      path: "/about",
+      path: "#",
       sub: [
         {
           name: "Alumni",
-          path: "/about/institute",
+          path: "/people/alumni",
           sub: [],
         },
         {
           name: "Faculty",
-          path: "/about/aim&objective",
+          path: "/people/faculty",
           sub: [],
         },
         {
-          name: "Students",
-          path: "/about/history",
+          name: "Student",
+          path: "/people/student",
           sub: [],
         },
         {
           name: "Staff",
-          path: "/about/faculty",
+          path: "/people/staff",
           sub: [],
         },
       ],
     },
     {
       name: "Contact",
-      path: "/about",
+      path: "/contact",
       sub: [],
     },
   ];
