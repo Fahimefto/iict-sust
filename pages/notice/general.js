@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
-export default function general() {
-  return <div>general</div>;
+export default function General() {
+  return <Layout>general</Layout>;
 }

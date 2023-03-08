@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
 export default function Research() {
-  return <div>index</div>;
+  return <Layout>index</Layout>;
 }

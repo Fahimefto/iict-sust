@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
 export default function acheivement() {
-  return <div>acheivement</div>;
+  return <Layout>acheivement</Layout>;
 }

@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
 export default function Staff() {
-  return <div>Staff</div>;
+  return <Layout>Staff</Layout>;
 }

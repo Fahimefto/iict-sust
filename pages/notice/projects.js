@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
 export default function projects() {
-  return <div>projects</div>;
+  return <Layout>projects</Layout>;
 }

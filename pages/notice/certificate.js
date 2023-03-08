@@ -1,5 +1,6 @@
 import React from "react";
+import Layout from "../../components/common/Layout";
 
 export default function certificate() {
-  return <div>certificate</div>;
+  return <Layout>certificate</Layout>;
 }
