@@ -153,7 +153,7 @@ const Nav1 = () => {
         },
         {
           name: "Staff",
-          path: "/people/staff",
+          path: "/about/officer&staff",
           sub: [],
         },
       ],
