@@ -1,7 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-export default function NoticeCard() {
+export default function NoticeCard({ date, title, description }) {
+  const dateConversion = new Date(date);
+
+  const year = dateConversion.getFullYear();
+  const month = dateConversion.toLocaleString("default", { month: "long" });
+  const day = dateConversion.getDate();
+
+  const formattedDate = `${day} ${month} ${year}`;
+  // console.log(formattedDate);
+
   return (
     <article className="rounded-xl w-full    bg-white p-0.5 shadow-sm border border-rose-800 transition hover:shadow-sm">
       <div className="rounded-[10px] bg-white p-4  sm:p-6">
@@ -19,16 +28,12 @@ export default function NoticeCard() {
             <circle cx="12" cy="12" r="10" />{" "}
             <polyline points="12 6 12 12 16 14" />
           </svg>
-          10th Oct 2022
+          {formattedDate}
         </div>
 
-        <h3 className="mt-0.5 text-lg font-medium text-gray-900">
-          How to center an element using JavaScript and jQuery
-        </h3>
+        <h3 className="mt-0.5 text-lg font-medium text-gray-900">{title}</h3>
         <h3 className="mt-0.5 text-md font-medium text-gray-600">
-          How to center an element using JavaScript and jQuery.How to center an
-          element using JavaScript and jQueryHow to center an element using
-          JavaScript and jQuery
+          {description}
         </h3>
 
         <div className="mt-4 flex flex-wrap gap-1">

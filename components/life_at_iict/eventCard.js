@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function EventCard() {
+
+  console.log("Hi")
   return (
     <article className="overflow-hidden rounded-lg  transition border border-rose-800 shadow-sm hover:bg-gray-100">
       <img
