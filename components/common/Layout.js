@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import Nav from "./Nav";
+import Nav1 from "./Nav1";
 import Head from "next/head";
 
 export default function Layout({ title, children }) {
@@ -17,15 +17,15 @@ export default function Layout({ title, children }) {
         <meta name="description" content="IICT,SUST" />
         <link rel="icon" href="/iict-white.png" />
       </Head>
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-screen justify-between flex-col">
         {/* <Nav /> */}
-        <header>
-          <Nav />
+        <header className=" z-50">
+          <Nav1 />
         </header>
         {/** Main content */}
-        <main>{children}</main>
+        <main className="relative">{children}</main>
         {/** Footer */}
-        <footer>
+        <footer className="relative mt-10">
           <Footer />
         </footer>
       </div>
