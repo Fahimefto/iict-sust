@@ -1,8 +1,13 @@
 import React from "react";
 
-export default function EventCard() {
+export default function EventCard({ date, location, title, description }) {
+  const dateConversion = new Date(date);
 
-  console.log("Hi")
+  const year = dateConversion.getFullYear();
+  const month = dateConversion.toLocaleString("default", { month: "long" });
+  const day = dateConversion.getDate();
+
+  const formattedDate = `${day} ${month} ${year}`;
   return (
     <article className="overflow-hidden rounded-lg  transition border border-rose-800 shadow-sm hover:bg-gray-100">
       <img
@@ -34,7 +39,7 @@ export default function EventCard() {
               <line x1="11" y1="15" x2="12" y2="15" />{" "}
               <line x1="12" y1="15" x2="12" y2="18" />
             </svg>
-            <h2 className="font-bold">13 January 2023</h2>
+            <h2 className="font-bold">{formattedDate}</h2>
           </div>
           <div className="flex items-center font">
             <svg
@@ -50,42 +55,16 @@ export default function EventCard() {
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />{" "}
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <h2 className="font-bold">IICT, SUST</h2>
+            <h2 className="font-bold">{location}</h2>
           </div>
         </div>
 
         <div>
-          <h3 className="mt-0.5 text-lg text-gray-800">
-            How to position your furniture for positivity
-          </h3>
+          <h3 className="mt-0.5 text-lg text-gray-800">{title}</h3>
         </div>
 
         <p className="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-          dolores, possimus pariatur animi temporibus nesciunt praesentium
-          dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
-          soluta, voluptates neque explicabo tempora nisi culpa eius atque
-          dignissimos. Molestias explicabo corporis voluptatem?Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
-          pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum
-          eveniet corporis quidem, mollitia itaque minus soluta, voluptates
-          neque explicabo tempora nisi culpa eius atque dignissimos. Molestias
-          explicabo corporis voluptatem?Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Recusandae dolores, possimus pariatur animi
-          temporibus nesciunt praesentium dolore sed nulla ipsum eveniet
-          corporis quidem, mollitia itaque minus soluta, voluptates neque
-          explicabo tempora nisi culpa eius atque dignissimos. Molestias
-          explicabo corporis voluptatem?Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Recusandae dolores, possimus pariatur animi
-          temporibus nesciunt praesentium dolore sed nulla ipsum eveniet
-          corporis quidem, mollitia itaque minus soluta, voluptates neque
-          explicabo tempora nisi culpa eius atque dignissimos. Molestias
-          explicabo corporis voluptatem?Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Recusandae dolores, possimus pariatur animi
-          temporibus nesciunt praesentium dolore sed nulla ipsum eveniet
-          corporis quidem, mollitia itaque minus soluta, voluptates neque
-          explicabo tempora nisi culpa eius atque dignissimos. Molestias
-          explicabo corporis voluptatem?
+          {description}
         </p>
         <button className="bg-rose-800 w-fit px-3 py-2 mt-3 rounded-md  text-white font-bold text-sm hover:scale-105 ease-in-out duration-200 flex items-center">
           View Details
