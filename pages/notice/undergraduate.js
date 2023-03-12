@@ -9,12 +9,9 @@ export default function Undergraduate() {
 
   async function getUndergraduateNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
+      const response = await Axios.get("http://localhost:5000/api/notices/undergrad");
       const data = response.data;
-      const filteredUndergraduateNotice = data.filter(
-        (data) => data.type === "sports"
-      );
-      setUndergraduateNotice(filteredUndergraduateNotice);
+      setUndergraduateNotice(data);
     } catch (err) {
       console.log(err);
     }

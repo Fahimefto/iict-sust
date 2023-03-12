@@ -9,13 +9,9 @@ export default function General() {
 
   async function getGeneralNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
-      const status = response.status;
+      const response = await Axios.get("http://localhost:5000/api/notices/general");
       const data = response.data;
-      const filteredGeneralNotice = data.filter(
-        (data) => data.type === "urgent"
-      );
-      setGeneralNotice(filteredGeneralNotice);
+      setGeneralNotice(data);
     } catch (err) {
       console.log(err);
     }

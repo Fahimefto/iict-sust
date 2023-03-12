@@ -9,12 +9,9 @@ export default function Graduate() {
 
   async function getGraduateNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
+      const response = await Axios.get("http://localhost:5000/api/notices/grad");
       const data = response.data;
-      const filteredFraduateNotice = data.filter(
-        (data) => data.type === "sports"
-      );
-      setGraduateNotice(filteredFraduateNotice);
+      setGraduateNotice(data);
     } catch (err) {
       console.log(err);
     }

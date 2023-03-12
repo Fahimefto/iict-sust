@@ -9,12 +9,9 @@ export default function CertificateNotice() {
 
   async function getCertificateNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
+      const response = await Axios.get("http://localhost:5000/api/notices/certificate");
       const data = response.data;
-      const filteredCertificateNotice = data.filter(
-        (data) => data.type === "sports"
-      );
-      setCertificateNotice(filteredCertificateNotice);
+      setCertificateNotice(data);
     } catch (err) {
       console.log(err);
     }

@@ -9,12 +9,8 @@ export default function Diploma() {
 
   async function getDiplomaNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
-      const data = response.data;
-      const filteredDiplomaNotice = data.filter(
-        (data) => data.type === "sports"
-      );
-      setDiplomaNotice(filteredDiplomaNotice);
+      const response = await Axios.get("http://localhost:5000/api/notices/diploma");
+      setDiplomaNotice(response.data);
     } catch (err) {
       console.log(err);
     }

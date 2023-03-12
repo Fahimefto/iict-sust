@@ -9,12 +9,10 @@ export default function Projects() {
 
   async function getProjectNotice() {
     try {
-      const response = await Axios.get("http://localhost:5000/api/notices");
+      const response = await Axios.get("http://localhost:5000/api/notices/projects");
       const data = response.data;
-      const filteredProjectNotice = data.filter(
-        (data) => data.type === "sports"
-      );
-      setProjectNotice(filteredProjectNotice);
+
+      setProjectNotice(data);
     } catch (err) {
       console.log(err);
     }

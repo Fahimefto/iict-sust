@@ -1,9 +1,26 @@
 import { Button, Card } from "flowbite-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaAngleRight } from "react-icons/fa";
+import Axios from "axios";
 export default function Notice() {
+
+  const [allNotice, setAllNotice] = useState([]);
+
+  async function getAllNotice() {
+    try {
+      const response = await Axios.get("http://localhost:5000/api/notices");
+      const data = response.data;
+      setAllNotice(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    getAllNotice();
+  }, []);
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
