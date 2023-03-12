@@ -2,7 +2,23 @@ import React from "react";
 
 import { MdOutlineSchool } from "react-icons/md";
 import { TbAlignBoxLeftTop } from "react-icons/tb";
-export default function ProgramCard() {
+export default function ProgramCard({
+  date,
+  type,
+  title,
+  description,
+  session,
+  file,
+  image,
+}) {
+  const dateConversion = new Date(date);
+
+  const year = dateConversion.getFullYear();
+  const month = dateConversion.toLocaleString("default", { month: "long" });
+  const day = dateConversion.getDate();
+
+  const formattedDate = `${day} ${month} ${year}`;
+  // console.log(formattedDate);
   return (
     <div
       className="bg-white max-w-6xl mt-10 lg:mx-auto  mx-10
@@ -12,26 +28,27 @@ export default function ProgramCard() {
         <div className="rounded-[10px] bg-white p-4 items-center text-center sm:p-6">
           <a href="#" className="justify-center flex flex-col">
             <h3 className="mt-0.5 text-lg font-bold text-gray-900">
-              Masters in IT
+              {type}
             </h3>
             <h3 className="mt-0.5 text font-medium text-gray-900">
-              Total Credit : 100
+              Date : {formattedDate}
             </h3>
-            <h3 className="mt-0.5  font-medium text-gray-900">
-              Course Duration : 1.5 Years
+            <h3 className="mt-0.5 text font-medium text-gray-900">
+              Title :{title}
             </h3>
+            <h3 className="mt-0.5  font-medium text-gray-900">{description}</h3>
             <h3 className="mt-0.5  font-medium text-gray-900">
-              Total Semester : 3
+              Session:{session}
             </h3>
           </a>
 
           <div className="mt-4 flex gap-3 justify-center h-full">
             <span className="whitespace-nowrap rounded-full bg-rose-800 px-3 py-2  text-white font-bold flex items-center">
-              Curriculam
+              File
               <TbAlignBoxLeftTop className="ml-1" />
             </span>
             <span className="whitespace-nowrap rounded-full bg-rose-800 px-3 py-2  text-white font-bold flex items-center">
-              Admission
+              Image
               <MdOutlineSchool className="ml-1" />
             </span>
           </div>
