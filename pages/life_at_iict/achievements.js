@@ -7,7 +7,7 @@ import Axios from "axios";
 export default function Acheivement() {
   const [acheivements, setAchievements] = useState([]);
 
-  async function getCertificateNotice() {
+  async function getAchievements() {
     try {
       const response = await Axios.get(
         "http://localhost:5000/api/achievements"
@@ -19,7 +19,7 @@ export default function Acheivement() {
     }
   }
   useEffect(() => {
-    getCertificateNotice();
+    getAchievements();
   }, []);
 
   return (

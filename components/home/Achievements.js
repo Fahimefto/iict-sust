@@ -1,9 +1,29 @@
-import React from "react";
-import EventCard from "./EventCard";
+import React, { useState, useEffect } from "react";
+import EventCard from "../life_at_iict/eventCard";
 import Carousel from "react-multi-carousel";
 import { Button } from "flowbite-react";
+import Axios from "axios";
 
 export default function Achievements() {
+  const [allAcheivements, setAllAchievements] = useState([]);
+
+  async function getCertificateNotice() {
+    try {
+      const response = await Axios.get(
+        "http://localhost:5000/api/achievements"
+      );
+      const data = response.data;
+      setAllAchievements(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    getCertificateNotice();
+  }, []);
+
+  console.log("allAcheivements", allAcheivements);
+  
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -31,18 +51,19 @@ export default function Achievements() {
           <hr className="mb-10 border-2 w-1/4 m-auto border-rose-800"></hr>
 
           <Carousel responsive={responsive}>
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
+            {allAcheivements.length > 0 &&
+              allAcheivements.map((achievement) => (
+                <div key={achievement.id} className="event-card-container">
+                  <EventCard
+                    date={achievement.date}
+                    location={achievement.location}
+                    title={achievement.title}
+                    description={achievement.description}
+                  />
+                </div>
+              ))}
           </Carousel>
+
           <Button
             className="m-auto mt-10 "
             color="failure"

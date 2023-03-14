@@ -9,7 +9,7 @@ export default function EventCard({ date, location, title, description }) {
 
   const formattedDate = `${day} ${month} ${year}`;
   return (
-    <article className="overflow-hidden rounded-lg  transition border border-rose-800 shadow-sm hover:bg-gray-100">
+    <article className="overflow-hidden rounded-lg  transition border border-rose-800 shadow-sm hover:bg-gray-100 min-h-full h-[500px] mr-2">
       <img
         alt="Office"
         src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"

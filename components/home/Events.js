@@ -1,8 +1,24 @@
 import { Button, Card } from "flowbite-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
+import Axios from "axios";
 
 export default function Events() {
+  const [upcomigEventes, setUpcomingEventes] = useState([]);
+
+  async function getUpComingEventes() {
+    try {
+      const response = await Axios.get("http://localhost:5000/api/up-events");
+      const data = response.data;
+      setUpcomingEventes(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    getUpComingEventes();
+  }, []);
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -30,7 +46,25 @@ export default function Events() {
           <hr className="mb-10 border-2 w-1/4 m-auto border-rose-800"></hr>
 
           <Carousel responsive={responsive}>
-            <div className="max-w-sm">
+            {upcomigEventes.length > 0 &&
+              upcomigEventes.map((event) => {
+                return (
+                  <div key={event.id} className="max-w-sm h-full">
+                    <Card
+                      imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
+                      className="bg-gray-100 h-full"
+                    >
+                      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        {event.title}
+                      </h5>
+                      <p className="font-normal text-gray-700 dark:text-gray-400">
+                        {event.description}
+                      </p>
+                    </Card>
+                  </div>
+                );
+              })}
+            {/* <div className="max-w-sm">
               <Card
                 imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
                 className="bg-gray-100"
@@ -98,7 +132,7 @@ export default function Events() {
                   2021 so far, in reverse chronological order.
                 </p>
               </Card>
-            </div>
+            </div> */}
           </Carousel>
           <Button
             className="m-auto mt-10 "
