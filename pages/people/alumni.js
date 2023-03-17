@@ -9,8 +9,9 @@ export default function Alumni() {
   async function getAlumni() {
     try {
       const response = await Axios.get("http://localhost:5000/api/alumni");
-      console.log(response);
+      //console.log(response);
       const data = response.data;
+      console.log(data);
       setAlumni(data);
     } catch (err) {
       console.log(err);
@@ -20,7 +21,7 @@ export default function Alumni() {
   useEffect(() => {
     getAlumni();
   }, []);
-  console.log(getAlumni);
+  //console.log(getAlumni);
   return (
     <Layout>
       <HeadingBar name="Alumni" />
