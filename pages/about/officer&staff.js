@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import HeadingBar from "../../components/common/headingBar";
 import FacultyCard from "../../components/about/facultyCard";
 import Layout from "../../components/common/Layout";
-import { Axios } from "axios";
+import StaffCard from "../../components/about/staffCard";
+import Axios from "axios";
 
 export default function Officerstaff() {
   const officer = [
@@ -13,25 +14,25 @@ export default function Officerstaff() {
       email: "hello@gmail.com",
     },
     {
-      id: 1,
+      id: 2,
       name: "Hello Ahmed Hello",
       designation: "Professor",
       email: "hello@gmail.com",
     },
     {
-      id: 1,
+      id: 3,
       name: "Hello Ahmed Hello",
       designation: "Professor",
       email: "hello@gmail.com",
     },
     {
-      id: 1,
+      id: 4,
       name: "Hello Ahmed Hello",
       designation: "Professor",
       email: "hello@gmail.com",
     },
     {
-      id: 1,
+      id: 5,
       name: "Hello Ahmed Hello",
       designation: "Professor",
       email: "hello@gmail.com",
@@ -69,21 +70,21 @@ export default function Officerstaff() {
   //     email: "hello@gmail.com",
   //   },
   // ];
-  const [staff,setStaff] = useState([])
-  async function getStaff(){
-    try{
+  const [staff, setStaff] = useState([]);
+  async function getStaff() {
+    try {
       const response = await Axios.get("http://localhost:5000/api/staffs");
       const data = response.data;
-      console.log(data);
+      //console.log(data);
       setStaff(data);
-    }catch(error){
+    } catch (error) {
       console.log(error);
     }
   }
-  useEffect(()=>{
+  useEffect(() => {
     getStaff();
-  })
-  console.log(getStaff);
+  });
+  //console.log(getStaff);
   return (
     <Layout>
       <HeadingBar name="Officer" />
@@ -101,16 +102,13 @@ export default function Officerstaff() {
       <HeadingBar name="Staff" />
       <div className="max-w-screen-2xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 place-items-center">
         {staff.map((staff) => (
-          <>
-          <FacultyCard
+          <StaffCard
             name={staff.staffName}
             email={staff.staffEmail}
             designation={staff.staffDesignation}
+            contact={staff.staffContact}
             key={staff.StaffId}
           />
-          <p>Name</p>
-          </>
-          
         ))}
       </div>
     </Layout>
